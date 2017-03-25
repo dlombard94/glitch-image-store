@@ -6,6 +6,7 @@ logs
 npm-debug.log*
 .idea
 .env.json
+models/picture-store.json
 
 # Runtime data
 pids
