@@ -55,13 +55,15 @@ const pictureStore = {
 
   deleteAllPictures(userId) {
     let album = this.getAlbum(userId);
-    album.photos.forEach(photo => {
-      const id = path.parse(photo.img);
-      cloudinary.api.delete_resources([id.name], result => {
-        console.log(result);
+    if (album) {
+      album.photos.forEach(photo => {
+        const id = path.parse(photo.img);
+        cloudinary.api.delete_resources([id.name], result => {
+          console.log(result);
+        });
       });
-    });
-    this.store.remove(this.collection, album);
+      this.store.remove(this.collection, album);
+    }
   },
 };
 
