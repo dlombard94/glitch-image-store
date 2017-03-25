@@ -16,6 +16,7 @@ router.post('/register', accounts.register);
 router.post('/authenticate', accounts.authenticate);
 
 router.get('/dashboard', dashboard.index);
+router.post('/dashboard/uploadpicture', dashboard.uploadPicture);
 router.get('/about', about.index);
 
 module.exports = router;
