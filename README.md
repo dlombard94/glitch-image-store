@@ -27,6 +27,23 @@ In order to run, you will need to place a Cloudinary credentials file in the roo
 }
 ~~~
 
+The following user accouts (on the local app only) have been pre-loaded, so you can log in with either:
+
+~~~
+    {
+      "firstName": "homer",
+      "lastName": "simpson",
+      "email": "homer@simpson.com",
+      "password": "secret",
+    },
+    {
+      "firstName": "marge",
+      "lastName": "simpson",
+      "email": "marge@simpson.com",
+      "password": "secret",
+    }
+~~~
+
 The Lowdb database is used to provide a local datastore:
 
 - <https://github.com/typicode/lowdb>
