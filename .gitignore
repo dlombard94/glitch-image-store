@@ -7,6 +7,7 @@ npm-debug.log*
 .idea
 .env.json
 models/picture-store.json
+tempimage
 
 # Runtime data
 pids
