@@ -13,9 +13,9 @@ This topic here reviews the Cloudinary service + this app in more detail:
 
 - <https://wit-web-dev-2016.github.io/web-app-1/topic-10-gomix-images/index.html>
 
-In order to run, you will need to place a Cloudinary credentials file in the root folder:
+In order to run, you will need to place a Cloudinary credentials file in the .data folder called .env.json:
 
-### .env.json
+### .data/.env.json
 
 ~~~
 {
