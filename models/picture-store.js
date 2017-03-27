@@ -7,7 +7,7 @@ const path = require('path');
 const logger = require('../utils/logger');
 
 try {
-  const env = require('../.env.json');
+  const env = require('../.data/.env.json');
   cloudinary.config(env.cloudinary);
 }
 catch(e) {
