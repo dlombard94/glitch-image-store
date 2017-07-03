@@ -44,6 +44,7 @@ const pictureStore = {
             title: title,
           };
           album.photos.push(picture);
+          this.store.save();
           response();
         });
       }
@@ -54,6 +55,7 @@ const pictureStore = {
     const id = path.parse(image);
     let album = this.getAlbum(userId);
     _.remove(album.photos, { img: image });
+    this.store.save();
     cloudinary.api.delete_resources([id.name], function (result) {
       console.log(result);
     });
@@ -69,6 +71,7 @@ const pictureStore = {
         });
       });
       this.store.remove(this.collection, album);
+      this.store.save();
     }
   },
 };
