@@ -32,6 +32,7 @@ const pictureStore = {
         photos: [],
       };
       this.store.add(this.collection, album);
+      this.store.save();
     }
 
     imageFile.mv('tempimage', err => {

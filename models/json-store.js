@@ -1,12 +1,16 @@
 'use strict';
 
 const low = require('lowdb');
-const fileAsync = require('lowdb/lib/file-async');
+const fileAsync = require('lowdb/lib/storages/file-async');
 
 class JsonStore {
   constructor(file, defaults) {
     this.db = low(file, { storage: fileAsync, });
     this.db.defaults(defaults).value();
+  }
+
+  save() {
+    this.db.write();
   }
 
   add(collection, obj) {
